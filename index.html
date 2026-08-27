@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homenagem Especial para a Mamãe</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #b0e0e6; /* Fundo rosa claro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #d147a3;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Container do "GIF" de fotos */
+        .galeria-gif {
+            width: 350px;
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%; /* Deixa em formato de círculo */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+
+        /* Configuração de cada foto */
+        .galeria-gif img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: passarFotos 12s infinite;
+        }
+
+        /* Tempo de cada foto (4 segundos para cada) */
+        .galeria-gif img:nth-child(1) { animation-delay: 0s; }
+        .galeria-gif img:nth-child(2) { animation-delay: 4s; }
+        .galeria-gif img:nth-child(3) { animation-delay: 8s; }
+
+        @keyframes passarFotos {
+            0% { opacity: 0; }
+            5% { opacity: 1; } /* Fade-in */
+            30% { opacity: 1; } /* Visível */
+            35% { opacity: 0; } /* Fade-out */
+            100% { opacity: 0; }
+        }
+
+        /* Player de Música */
+        .player-musica {
+            margin-top: 30px;
+            background: white;
+            padding: 8px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Para a Melhor Mãe do Mundo! ❤️</h1>
+
+    <div class="galeria-gif">
+        <img src="1.jpg" alt="Foto 1">
+        <img src="2.jpg" alt="Foto 2">
+        <img src="3.jpg" alt="Foto 3">
+    </div>
+
+    <div class="player-musica">
+        <audio controls autoplay loop>
+            <source src="1.mp3" type="audio/mpeg">
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+</body>
+</html>
